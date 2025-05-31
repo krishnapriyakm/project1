@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <title>calculator app</title>
+</head>
+
+<body>
+    <div>
+        <form>
+            <label>enter the first number:</label>
+            <input id="first"></br>
+            <label>enter second number:</label>
+            <input id="second"></br>
+            <select id="operator">
+                <option>+</option>
+                <option>-</option>
+                <option>*</option>
+                <option>/</option>
+            </select>
+            <button onclick="calculator()">SUBMIT</button>
+            <h2>Result:</h2>
+            <h1 id="resultText"></h1>
+            <a href="/calculator.html">
+            </a>
+        </form>
+        <a href="/index.html"><img width="48" height="48" src="https://img.icons8.com/deco-glyph/48/circled-left-2.png" alt="circled-left-2"/></a>
+    </div>
+    <script>
+        function calculator() {
+            let no1 = parseInt(document.getElementById("first").value);
+            let no2 = parseFloat(document.getElementById("second").value);
+            let op = document.getElementById("operator").value;
+            var result = 0;
+
+            if (op == '+') {
+                result = no1+no2;
+            }
+            else if (op == '-') {
+                result = no1-no2;
+            }
+            else if (op == '/') {
+                result = no1/no2;
+            }
+            else {
+                result = no1*no2;
+            }
+            document.getElementById("resultText").innerText=result;
+            
+            event.preventDefault();
+        }
+    </script>
+
+
+
+</body>
+
+</html>
